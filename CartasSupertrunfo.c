@@ -9,8 +9,8 @@ int main (){
     float Area, Area2;
     float PIB, PIB2;
     int Numero_Pontos_turisticos, Numero_Pontos_turisticos2;
-    float Densidade_populacional;
-    float PIB_per_capita;
+    float Densidade_populacional, Densidade_Populacional2;
+    float PIB_per_capita, PIB_per_capita2;
 
     //função utilizada para captação de dados digitados pelo usuário "scanf"
     //Sintaxe scanf(“string”,&variavel)
@@ -51,7 +51,10 @@ int main (){
     printf("Numero Pontos turisticos: %d \n", Numero_Pontos_turisticos);
 
     Densidade_populacional = (float) Populacao / Area; 
+    printf("Densidade Populacional por km²:%.1f\n", Densidade_populacional);
 
+    PIB_per_capita = (float) PIB/ Populacao;
+    printf("PIB per capita populacional: %.1f\n", PIB_per_capita);
 
 
     //Carta 2
@@ -84,8 +87,14 @@ int main (){
     scanf("%d", &Numero_Pontos_turisticos2);
     printf("Numero Pontos turisticos2: %d \n", Numero_Pontos_turisticos2);
     
+    Densidade_Populacional2 = Populacao2 / Area2; 
+    printf("Densidade Populacional por km²:%.1f\n", Densidade_Populacional2);
     
-    
+    PIB_per_capita2 = (float) PIB2/ Populacao2;
+    printf("PIB per capita populacional: %.1f\n", PIB_per_capita2);
+
+
+
     
     return 0;
 
