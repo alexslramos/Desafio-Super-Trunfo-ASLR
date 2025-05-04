@@ -3,14 +3,17 @@
 int main (){
 
     char Estado, Estado2;
-    char Codigo [5], Codigo2 [5];
+    char Codigo [5]; 
+    char Codigo2 [5];
     char Nome_da_Cidade [15], Nome_da_Cidade2 [15];
-    int Populacao, Populacao2;
+    unsigned long int Populacao, Populacao2;
     float Area, Area2;
     float PIB, PIB2;
     int Numero_Pontos_turisticos, Numero_Pontos_turisticos2;
     float Densidade_populacional, Densidade_Populacional2;
     float PIB_per_capita, PIB_per_capita2;
+    float Super_Poder;
+
 
     //função utilizada para captação de dados digitados pelo usuário "scanf"
     //Sintaxe scanf(“string”,&variavel)
@@ -35,8 +38,8 @@ int main (){
     printf("Nome da cidade: %s \n", Nome_da_Cidade);
 
     printf("Digite o numero Populacional:");
-    scanf("%d", &Populacao);       
-    printf("Numero Populacional: %d\n", Populacao);
+    scanf("%lu", &Populacao);       
+    printf("Numero Populacional: %lu\n", Populacao);
 
     printf ("Digite a Area:");
     scanf ("%f", &Area);
@@ -56,7 +59,10 @@ int main (){
     PIB_per_capita = (float) PIB/ Populacao;
     printf("PIB per capita populacional: %.1f\n", PIB_per_capita);
 
-
+    Super_Poder =(float) 1/(Populacao + Area + PIB + Numero_Pontos_turisticos + Densidade_populacional + PIB_per_capita);
+    printf("Super Poder:%f\n", Super_Poder);
+    
+    
     //Carta 2
 
     printf("Digite o estado2:");
@@ -72,8 +78,8 @@ int main (){
     printf("Nome da cidade2: %s \n", Nome_da_Cidade2);
 
     printf("Digite o numero Populacional2:");
-    scanf("%d", &Populacao2);       
-    printf("Numero Populacional2: %d\n", Populacao2);
+    scanf("%lu", &Populacao2);       
+    printf("Numero Populacional2: %lu\n", Populacao2);
 
     printf ("Digite a Area2:");
     scanf ("%f", &Area2);
