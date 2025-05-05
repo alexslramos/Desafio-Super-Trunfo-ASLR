@@ -3,7 +3,7 @@
 int main (){
 
     char Estado, Estado2;
-    char Codigo [3], Codigo2 [5];
+    char Codigo[3], Codigo2[3];
     char Nome_da_Cidade [15], Nome_da_Cidade2 [15];
     unsigned long int Populacao, Populacao2;
     float Area, Area2;
@@ -103,21 +103,9 @@ int main (){
     printf("Super Poder:%f\n", Super_Poder2);
     
     
-    printf("Populacao1 é maior que Populacao2: %lu \n", Populacao > Populacao2);
-
-    printf("A Area é maior que Area2: %f \n", Area > Area2);
-
-    printf("PIB é maior que PIB2: %f \n", PIB > PIB2);
-
-    Printf("Carta 1 tem mais pontos turisticos que carta 2: %d \n", Numero_Pontos_turisticos > Numero_Pontos_turisticos2);
-
-    printf("A Populacao da carta1 é menor que a carta 2: %f \n", Densidade_populacional < Densidade_Populacional2);
-
-    Printf("PIB per capita 1 é maior que PIB per capita 2: %f \n", PIB_per_capita > PIB_per_capita2);
-
-    printf("Super poder da carta 1 é maior que Super poder da carta 2: %f \n", Super_Poder > Super_Poder2);
-
-
+    resultado = Populacao > Populacao2;
+    
+   
     
     return 0;
 
