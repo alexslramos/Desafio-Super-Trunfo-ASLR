@@ -3,8 +3,7 @@
 int main (){
 
     char Estado, Estado2;
-    char Codigo [5]; 
-    char Codigo2 [5];
+    char Codigo [3], Codigo2 [5];
     char Nome_da_Cidade [15], Nome_da_Cidade2 [15];
     unsigned long int Populacao, Populacao2;
     float Area, Area2;
@@ -12,8 +11,8 @@ int main (){
     int Numero_Pontos_turisticos, Numero_Pontos_turisticos2;
     float Densidade_populacional, Densidade_Populacional2;
     float PIB_per_capita, PIB_per_capita2;
-    float Super_Poder;
-
+    float Super_Poder, Super_Poder2;
+    int resultado;
 
     //função utilizada para captação de dados digitados pelo usuário "scanf"
     //Sintaxe scanf(“string”,&variavel)
@@ -56,10 +55,10 @@ int main (){
     Densidade_populacional = (float) Populacao / Area; 
     printf("Densidade Populacional por km²:%.1f\n", Densidade_populacional);
 
-    PIB_per_capita = (float) PIB/ Populacao;
-    printf("PIB per capita populacional: %.1f\n", PIB_per_capita);
+    PIB_per_capita = (float) PIB / Populacao;
+    printf("PIB per capita: %f\n", PIB_per_capita);
 
-    Super_Poder =(float) 1/(Populacao + Area + PIB + Numero_Pontos_turisticos + Densidade_populacional + PIB_per_capita);
+    Super_Poder =(float) (1/Densidade_populacional) + Populacao + Area + PIB + Numero_Pontos_turisticos + PIB_per_capita ;
     printf("Super Poder:%f\n", Super_Poder);
     
     
@@ -97,8 +96,26 @@ int main (){
     printf("Densidade Populacional por km²:%.1f\n", Densidade_Populacional2);
     
     PIB_per_capita2 = (float) PIB2/ Populacao2;
-    printf("PIB per capita populacional: %.1f\n", PIB_per_capita2);
+    printf("PIB per capita populacional: %f\n", PIB_per_capita2);
 
+
+    Super_Poder2 =(float) (1/Densidade_populacional) + Populacao + Area + PIB + Numero_Pontos_turisticos + PIB_per_capita;
+    printf("Super Poder:%f\n", Super_Poder2);
+    
+    
+    printf("Populacao1 é maior que Populacao2: %lu \n", Populacao > Populacao2);
+
+    printf("A Area é maior que Area2: %f \n", Area > Area2);
+
+    printf("PIB é maior que PIB2: %f \n", PIB > PIB2);
+
+    Printf("Carta 1 tem mais pontos turisticos que carta 2: %d \n", Numero_Pontos_turisticos > Numero_Pontos_turisticos2);
+
+    printf("A Populacao da carta1 é menor que a carta 2: %f \n", Densidade_populacional < Densidade_Populacional2);
+
+    Printf("PIB per capita 1 é maior que PIB per capita 2: %f \n", PIB_per_capita > PIB_per_capita2);
+
+    printf("Super poder da carta 1 é maior que Super poder da carta 2: %f \n", Super_Poder > Super_Poder2);
 
 
     
