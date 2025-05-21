@@ -71,7 +71,7 @@ int main (){
     printf("Digite o codigo da carta2:");
     scanf("%s", &Codigo2);
     printf("Codigo da carta2: %s \n", Codigo2);
-
+    
     printf("Digite o nome da Cidade2:");
     scanf("%s", &Nome_da_Cidade2);
     printf("Nome da cidade2: %s \n", Nome_da_Cidade2);
@@ -104,8 +104,9 @@ int main (){
     
     
     resultado = Populacao > Populacao2;
+    printf("carta vence:%lu\n", resultado);
+
     
-   
     
     return 0;
 
